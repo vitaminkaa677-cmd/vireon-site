@@ -1,30 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIREON — Creative Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Фото, дизайн та брендування під ключ. VIREON — студія для бізнесу і подій." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#top">VIREON</a>
 
-<header class="hero">
-  <h1>VIREON</h1>
-  <p>Фото, дизайн та брендування під ключ</p>
-</header>
+      <nav class="menu" aria-label="Навігація">
+        <a href="#services">Послуги</a>
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#about">Про нас</a>
+        <a class="btn btn--small" href="#contact">Запис онлайн</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="services">
-  <h2>Наші послуги</h2>
-  <div class="cards">
-    <div class="card">Фотозйомка</div>
-    <div class="card">Друк на одязі</div>
-    <div class="card">Брендований мерч</div>
-    <div class="card">Графічний дизайн</div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>Фото, дизайн та брендування під ключ</h1>
+          <p class="muted">
+            Допомагаємо бізнесам і подіям виглядати круто: від фотозйомки до мерчу й дизайну.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="#contact">Записатися</a>
+            <a class="btn btn--ghost" href="#portfolio">Дивитись портфоліо</a>
+          </div>
+
+          <ul class="badges">
+            <li>Швидко</li>
+            <li>Якісно</li>
+            <li>Під стиль бренду</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <!-- Після того як додаси фото — заміниш шлях -->
+          <img src="assets/hero.jpg" alt="Приклад робіт VIREON" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+          <div class="placeholder__text">
+            Додай фото: <code>assets/hero.jpg</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Наші послуги</h2>
+          <p class="muted">Натискай на послугу — відкриється опис і кнопка “Замовити”.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Фотозйомка</h3>
+            <p class="muted">Контент для Instagram/сайту, зйомка подій, портрети, каталоги.</p>
+            <a class="link" href="#contact" data-service="Фотозйомка">Замовити →</a>
+          </article>
+
+          <article class="card">
+            <h3>Друк на одязі</h3>
+            <p class="muted">Футболки/худі/форма. Підбір матеріалу, макет, друк.</p>
+            <a class="link" href="#contact" data-service="Друк на одязі">Замовити →</a>
+          </article>
+
+          <article class="card">
+            <h3>Брендований мерч</h3>
+            <p class="muted">Сумки, стікери, коробки, пакування — під ключ.</p>
+            <a class="link" href="#contact" data-service="Брендований мерч">Замовити →</a>
+          </article>
+
+          <article class="card">
+            <h3>Графічний дизайн</h3>
+            <p class="muted">Лого, банери, візитки, афіші, презентації.</p>
+            <a class="link" href="#contact" data-service="Графічний дизайн">Замовити →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section section--dark">
+      <div class="container">
+        <div class="section__head">
+          <h2>Портфоліо</h2>
+          <p class="muted">Клік по фото відкриває його у повному розмірі.</p>
+        </div>
+
+        <div class="gallery">
+          <!-- Заміни на свої фото: assets/p1.jpg ... -->
+          <button class="shot" data-img="assets/p1.jpg" aria-label="Відкрити роботу 1">
+            <img src="assets/p1.jpg" alt="Робота 1" onerror="this.style.display='none'; this.parentElement.classList.add('shot--placeholder');" />
+            <span class="shot__cap">Робота 1</span>
+          </button>
+
+          <button class="shot" data-img="assets/p2.jpg" aria-label="Відкрити роботу 2">
+            <img src="assets/p2.jpg" alt="Робота 2" onerror="this.style.display='none'; this.parentElement.classList.add('shot--placeholder');" />
+            <span class="shot__cap">Робота 2</span>
+          </button>
+
+          <button class="shot" data-img="assets/p3.jpg" aria-label="Відкрити роботу 3">
+            <img src="assets/p3.jpg" alt="Робота 3" onerror="this.style.display='none'; this.parentElement.classList.add('shot--placeholder');" />
+            <span class="shot__cap">Робота 3</span>
+          </button>
+
+          <button class="shot" data-img="assets/p4.jpg" aria-label="Відкрити роботу 4">
+            <img src="assets/p4.jpg" alt="Робота 4" onerror="this.style.display='none'; this.parentElement.classList.add('shot--placeholder');" />
+            <span class="shot__cap">Робота 4</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Про нас</h2>
+        </div>
+
+        <div class="about">
+          <p>
+            <strong>VIREON</strong> — студія, що поєднує креатив і системність: зйомка, дизайн і мерч,
+            щоб твій бренд виглядав цілісно та дорого.
+          </p>
+          <ul class="ticks">
+            <li>Підбираємо стиль під бренд</li>
+            <li>Працюємо швидко, але акуратно</li>
+            <li>Даємо готові файли для друку та соцмереж</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--soft">
+      <div class="container">
+        <div class="section__head">
+          <h2>Запис онлайн</h2>
+          <p class="muted">Заповни форму — відкриється лист у пошті з готовим текстом.</p>
+        </div>
+
+        <form class="form" id="orderForm">
+          <div class="form__row">
+            <label>
+              Послуга
+              <select id="serviceSelect" required>
+                <option value="Фотозйомка">Фотозйомка</option>
+                <option value="Друк на одязі">Друк на одязі</option>
+                <option value="Брендований мерч">Брендований мерч</option>
+                <option value="Графічний дизайн">Графічний дизайн</option>
+              </select>
+            </label>
+
+            <label>
+              Ваше ім’я
+              <input id="nameInput" type="text" placeholder="Напр. Юля" required />
+            </label>
+          </div>
+
+          <label>
+            Коротко про задачу
+            <textarea id="detailsInput" rows="4" placeholder="Що треба зробити, дата/місто, формат, дедлайн..." required></textarea>
+          </label>
+
+          <div class="form__actions">
+            <!-- заміниш email на свій -->
+            <button class="btn" type="submit">Надіслати запит</button>
+            <a class="btn btn--ghost" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+
+          <p class="tiny muted">
+            Порада: заміни посилання Instagram і email у коді — тоді все буде “по-справжньому”.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <span>© <span id="year"></span> VIREON</span>
+      <a class="link" href="#top">Вгору ↑</a>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <button class="modal__backdrop" id="modalClose" aria-label="Закрити"></button>
+    <div class="modal__content" role="dialog" aria-modal="true" aria-label="Перегляд фото">
+      <img id="modalImg" alt="Перегляд роботи" />
+    </div>
   </div>
-</section>
 
-<footer>
-  <p>© 2025 VIREON</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
